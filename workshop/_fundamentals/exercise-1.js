@@ -5,8 +5,15 @@
 
 const letterCount = (arr) => {
   // Insert missing solution please
+  if(!Array.isArray(arr) || !arr.every(str => typeof str === "string")){
+    return undefined
+  }
+  return arr.reduce((acc, curr) => acc + curr.length,0);
 };
 
+console.log(
+  letterCount(["mike", "francisco", true, "baez"])
+)
 // 2. Do a console.log to verify your function.
 
 // 3. Test your function.

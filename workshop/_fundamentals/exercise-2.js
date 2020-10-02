@@ -7,8 +7,15 @@
 
 const combineArrays = (arr1, arr2) => {
   // Insert missing solution please
+  if(!Array.isArray(arr1) || !Array.isArray(arr2) || !arr1.every(str => typeof str === "string") || !arr2.every(str => typeof str === "string")){
+    return undefined
+  }
+  return [...arr1, ...arr2].sort();
 };
 
+console.log(
+  combineArrays(["mike", "frank"], ["baez", "a"])
+)
 // 2. Do a console.log to verify your function.
 
 // 3. Test your function.

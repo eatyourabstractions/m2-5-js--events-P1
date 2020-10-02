@@ -14,7 +14,15 @@ let foodPairings = {
 
 const getPairing = (key) => {
   // Insert missing solution please
+  if(!Object.keys(foodPairings).includes(key)){
+    return undefined
+  }
+  return foodPairings[key];
 };
+
+console.log(
+  getPairing('phily cheese stake')
+)
 
 // 2. Do a console.log to verify your function.
 

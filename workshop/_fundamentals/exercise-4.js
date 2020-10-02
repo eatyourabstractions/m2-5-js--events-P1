@@ -7,8 +7,25 @@
 
 const getValues = (arr, key) => {
   // Insert missing solution please
+  let ans = []
+  for(let idx = 0; idx <= arr.length - 1; idx++){
+    if(!Object.keys(arr[idx]).includes(key)){
+      return undefined
+    } else{
+      ans.push(arr[idx][key])
+    }
+  }
+  return ans
 };
 
+
+console.log(
+  getValues([
+    { name: "chris", age: 23, shirtSize: "X" },
+    { name: "liv", age: 36, shirtSize: "S" },
+    { name: "dave", age: 43, shirtSize: "XL" },
+  ], 'shirtSize')
+)
 // 2. Do a console.log to verify your function.
 
 // 3. Test your function.
